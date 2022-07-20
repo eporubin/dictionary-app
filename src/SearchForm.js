@@ -21,21 +21,38 @@ export default function SearchForm(){
             const firstResult = response[0];
             setSearchData(firstResult);
             console.log(`Search data is`, firstResult);
-            // console.log(`The meaning of this word is `, response.data[0].meanings[0].definitions[0].definition);
         }
     }
     return (
         <div className="SearchForm">
-            <div className="wrapper">
-                <div className="label">Let's embrace the unknown</div>
-                <form className="searchBar" onSubmit={Search}>
-                    <input className="searchQueryInput" type="search"  placeholder="Search" defaultValue={""} autoFocus={true} onChange={UpdateSearch} />
-                    <button className="searchQuerySubmit" type="submit" >
-                         🔍
-                    </button>
-                </form>
+            <header>
+             <div className="container-fluid mt-5 ">
+                <div className="brand-name">
+                    Elle Dictionary
+                </div>
+                <div className="wrapper">
+                    <div className="label">
+                    Let's embrace the unknown
+                    </div>
+                    <form className="searchBar" onSubmit={Search}>
+                        <input className="searchQueryInput" type="search"  placeholder="Search" defaultValue={""} autoFocus={true} onChange={UpdateSearch} />
+                        <button className="searchQuerySubmit" type="submit" >
+                             🔍
+                        </button>
+                        </form>
+                </div>
             </div>
-            <Results data={searchData} />
+            </header>
+                <div className="container-fluid mt-3">
+                    <div className="row">
+                        <div className="col-md-9">
+                           <Results data={searchData} />
+                        </div>
+                        <div className="col-md-3">
+                           <h1>Images container</h1>
+                        </div>
+                    </div>
+                </div>
         </div>
     )
 }
