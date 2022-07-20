@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './SearchForm.css';
-import axios from "axios";
+import Results from "./Results";
 
 //api documentation https://dictionaryapi.dev/
 
@@ -16,10 +16,12 @@ export default function SearchForm(){
         event.preventDefault()
         if (searchTerm !== " "){
             let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`
-            const response = await axios.get(apiUrl);
-            setSearchData(response);
-            alert(`searching for ${searchTerm}`);
-            console.log(`Search data is`, searchData.data);
+            const responseRaw = await fetch(apiUrl);
+            const response = await responseRaw.json();
+            const firstResult = response[0];
+            setSearchData(firstResult);
+            console.log(`Search data is`, firstResult);
+            // console.log(`The meaning of this word is `, response.data[0].meanings[0].definitions[0].definition);
         }
     }
     return (
@@ -33,6 +35,7 @@ export default function SearchForm(){
                     </button>
                 </form>
             </div>
+            <Results data={searchData} />
         </div>
     )
 }
