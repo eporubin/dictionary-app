@@ -20,13 +20,7 @@ export default function Definitions(props){
            })}
            </div>
            <div>
-               {props.meaning.synonyms.map(function(synonyms, index){
-                   return(
-                       <div key={index}>
-                           <Synonyms synonyms={synonyms} />
-                       </div>
-                   )
-               })}
+              <Synonyms synonyms = {props.meaning.synonyms} />
            </div>
        </div>
     )

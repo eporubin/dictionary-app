@@ -22,9 +22,6 @@ export default function Results(props){
                     </div>
                 </div>
                 </div>
-                
-                
-                
                 <h2>
                     {props.data.meanings.map(function(meaning, index){
                         return (

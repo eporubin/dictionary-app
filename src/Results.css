@@ -1,5 +1,6 @@
 .word-box {
     font-weight: 900;
-    background-color: aliceblue;
-    padding: 10px;
+    background-color: white;
+    margin: 1px 0 10px 0;
+    padding: 10px 20px;
 }
