@@ -45,12 +45,12 @@ export default function SearchForm(){
             </header>
                 <div className="container-fluid mt-3">
                     <div className="row">
-                        <div className="col-md-9">
+                        <div className="col-md-12">
                            <Results data={searchData} />
                         </div>
-                        <div className="col-md-3">
+                        {/* <div className="col-md-3">
                            <h1>Images container</h1>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
         </div>

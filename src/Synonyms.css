@@ -1,17 +1,44 @@
 .Synonyms{
     padding: 10px 0 10px 0;
+    margin-top: 20px;
+}
+.Synonyms h2 {
+    color:white;
+    font-family: 'Blinker', sans-serif;
+    letter-spacing: +0.3rem;
+    margin-left:-20px;
+    background-color: transparent;
+    padding:0;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent; 
+    border-left:40px solid blueviolet;
 
 }
+.Synonyms h2 b{
+    background-color: blueviolet;
+    padding: 5px;
+    font-weight: 400;
+    margin-left: -10px;
+    border-radius: 5px;
+}
+.arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    
+    border-left:30px solid blue; 
+  }
 ul {
     list-style: none;
-   text-align: center;
+   text-align: justify;
    margin:0;
    padding: 0;
    justify-content: space-evenly;
 }
 ul li{
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     padding: 5px 10px 5px 10px;
     border: 2px solid white;
     border-radius: 20px;

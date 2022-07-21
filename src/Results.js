@@ -9,7 +9,7 @@ export default function Results(props){
         return (
             <div className="Results">
                 <div className="container-fluid"> 
-                <div className="container-fluid word-box rounded shadow-lg">
+                <div className="container-fluid word-box rounded shadow-lg align-self-center">
                 <div className="row">
                     <div className="col-sm-3">
                         <h3> {props.data.word}</h3>
@@ -18,11 +18,14 @@ export default function Results(props){
                     <h3>🔊{props.data.phonetic}</h3>
                     </div>
                     <div className="col-sm-6">
-                    <h3>Nr. of types: {props.data.meanings.length}  </h3>
+                    <h3>Nr. of definitions: {props.data.meanings.length}  </h3>
                     </div>
                 </div>
                 </div>
-                <h2>
+
+                <div className="row">
+                    
+                    
                     {props.data.meanings.map(function(meaning, index){
                         return (
                             <div key={index}>
@@ -31,7 +34,11 @@ export default function Results(props){
                         )
                     })
                     }
-                </h2>
+    
+                </div>
+
+                
+                
             </div>
                 </div>
                 
