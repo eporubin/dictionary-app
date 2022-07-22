@@ -24,7 +24,7 @@ export default function SearchForm(){
         }
     }
     async function initializeDictionary(){
-        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/code`;
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/form`;
         const responseRaw = await fetch(apiUrl);
             const response = await responseRaw.json();
             const firstResult = response[0];
