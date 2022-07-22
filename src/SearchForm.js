@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './SearchForm.css';
 import Results from "./Results";
 
@@ -23,6 +23,16 @@ export default function SearchForm(){
             console.log(`Search data is`, firstResult);
         }
     }
+    async function initializeDictionary(){
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/code`;
+        const responseRaw = await fetch(apiUrl);
+            const response = await responseRaw.json();
+            const firstResult = response[0];
+            setSearchData(firstResult);
+    }
+    useEffect(() => {
+        initializeDictionary()
+    }, [])
     return (
         <div className="SearchForm">
             <header>
