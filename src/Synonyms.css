@@ -10,16 +10,17 @@
     background-color: transparent;
     padding:0;
     border-top: 35px solid transparent;
-    border-bottom: 35px solid transparent; 
-    border-left:40px solid blueviolet;
+    border-bottom:35px solid transparent; 
+    border-left:35px solid blueviolet;
 
 }
 .Synonyms h2 b{
     background-color: blueviolet;
-    padding: 5px;
+    padding: 10px;
     font-weight: 400;
     margin-left: -10px;
     border-radius: 5px;
+    font-size: 24px;
 }
 .arrow-left {
     width: 0; 

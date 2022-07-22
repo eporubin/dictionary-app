@@ -12,11 +12,12 @@ export default function Definitions(props){
                {props.meaning.definitions.map(function(definition, index){
                return(
                    <div key={index}>
-                       <p>
-                       -{definition.definition}
+                      
+                       📚{definition.definition}
                        <br />
-                       <i>{definition.example}</i>
-                       </p>
+                       {/* not display this section if there is not an example */}
+                       <div className="example-definition">"{definition.example}"</div>
+                       
                    </div>
                )
            })}

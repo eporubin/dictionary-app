@@ -1,5 +1,6 @@
 import React from "react";
 import Definitions from "./Definitions";
+import Phonetic from "./Phonetic";
 import './Results.css';
 
 export default function Results(props){
@@ -12,13 +13,13 @@ export default function Results(props){
                 <div className="container-fluid word-box rounded shadow-lg align-self-center">
                 <div className="row">
                     <div className="col-sm-3">
-                        <h3> {props.data.word}</h3>
+                        <h4> {props.data.word}</h4>
                     </div>
                     <div className="col-sm-3">
-                    <h3>🔊{props.data.phonetic}</h3>
+                         <Phonetic phonetic = {props.data.phonetics[props.data.phonetics.length - 1]} />
                     </div>
                     <div className="col-sm-6">
-                    <h3>Nr. of definitions: {props.data.meanings.length}  </h3>
+                    <h4 className="text-centered text-muted ">Nr. of definitions: {props.data.meanings.length}  </h4>
                     </div>
                 </div>
                 </div>

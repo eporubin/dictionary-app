@@ -1,4 +1,17 @@
 .Definitions {
-    margin: 10px 0;
+    margin: 0;
     padding: 10px 20px;
+}
+.Definitions h1{
+    color:blueviolet;
+    padding: 5px;
+    text-transform: capitalize;
+    font-family: Blinker, sans-serif;
+    font-weight: 500;
+}
+.Definitions .example-definition {
+    font-style: italic;
+}
+.Definitions li {
+    list-style-type: disc;
 }
