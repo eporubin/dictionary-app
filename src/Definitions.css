@@ -1,6 +1,6 @@
 .Definitions {
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 .Definitions h1{
     color:blueviolet;
@@ -9,8 +9,17 @@
     font-family: Blinker, sans-serif;
     font-weight: 500;
 }
+.Definitions .definition {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Blinker, sans-serif;
+    
+}
 .Definitions .example-definition {
     font-style: italic;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 16px;
+    /* letter-spacing: +0.4rem; */
 }
 .Definitions li {
     list-style-type: disc;

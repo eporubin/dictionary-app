@@ -10,7 +10,7 @@ export default function Results(props){
         return (
             <div className="Results">
                 <div className="container-fluid"> 
-                <div className="container-fluid word-box rounded shadow-lg align-self-center">
+                <div className="container word-box rounded shadow-lg align-self-center">
                 <div className="row">
                     <div className="col-sm-3">
                         <h4> {props.data.word}</h4>

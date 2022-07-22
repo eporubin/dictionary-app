@@ -71,3 +71,59 @@
   .searchQuerySubmit:hover {
     cursor: pointer;
   }
+
+  @media (max-width: 767.98px) { 
+    .brand-name{
+      font-size: 7rem;
+    }
+    .label {
+      font-size: 1.0rem;
+      max-width: 100%;
+      font-weight: 500;
+      font-family: 'Blinker', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: +1.3px;
+      margin-bottom: 0.5rem;
+      margin-top:0.5rem;
+      padding-left: 10rem;
+    }
+  }
+  @media (max-width: 576px){
+    .brand-name{
+      font-size: 5rem;
+    }
+    .label {
+      font-size: 1.0rem;
+      letter-spacing: +1.3px;
+      margin-bottom: 0.5rem;
+      margin-top:1rem;
+      padding-left: 4rem;
+    }
+  }
+  @media (max-width: 450px){
+    .brand-name{
+      font-size: 4rem;
+    }
+    .label {
+      font-size: 0.8rem;
+      letter-spacing: +1.3px;
+      margin-bottom: 0.5rem;
+      margin-top:1.5rem;
+      padding-left: 3rem;
+    }
+  }
+  @media (max-width: 360px){
+    .brand-name{
+      font-size: 3rem;
+      
+    }
+    .label {
+      font-size: 0.8rem;
+      letter-spacing: +1.3px;
+      margin-bottom: 0.5rem;
+      margin-top:2.5rem;
+      padding-left: 2.5rem;
+      padding-bottom: 1rem;
+    }
+  }
+  

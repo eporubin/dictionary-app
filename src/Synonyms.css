@@ -5,7 +5,7 @@
 .Synonyms h2 {
     color:white;
     font-family: 'Blinker', sans-serif;
-    letter-spacing: +0.3rem;
+    letter-spacing: +0.1rem;
     margin-left:-20px;
     background-color: transparent;
     padding:0;
@@ -22,14 +22,7 @@
     border-radius: 5px;
     font-size: 24px;
 }
-.arrow-left {
-    width: 0; 
-    height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent; 
-    
-    border-left:30px solid blue; 
-  }
+
 ul {
     list-style: none;
    text-align: justify;
@@ -47,6 +40,7 @@ ul li{
     display: inline-block;
     background-color: blueviolet;
     color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     transition: all 100ms ease-in-out;
     
 }
@@ -55,3 +49,24 @@ ul li:hover{
     color: blueviolet;
     border: 2px solid blueviolet;
 }
+
+@media (max-width: 767.98px) { 
+    .Synonyms  .section-title{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        border-top: 10px solid transparent;
+    border-bottom:10px solid transparent; 
+    border-left:20px solid blueviolet;
+    border-right:20px solid blueviolet;
+    color: white;
+    }
+
+    .Synonyms .section-title .fill{
+        background-color: blueviolet;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+ }
