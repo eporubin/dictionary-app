@@ -15,12 +15,6 @@
     font-family: Blinker, sans-serif;
     
 }
-.Definitions .example-definition {
-    font-style: italic;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-    font-size: 16px;
-    /* letter-spacing: +0.4rem; */
-}
 .Definitions li {
     list-style-type: disc;
 }

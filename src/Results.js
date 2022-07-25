@@ -12,14 +12,14 @@ export default function Results(props){
                 <div className="container-fluid"> 
                 <div className="container word-box rounded shadow-lg align-self-center">
                 <div className="row">
-                    <div className="col-sm-3">
+                    <div className="col-sm-4">
                         <h4> {props.data.word}</h4>
                     </div>
-                    <div className="col-sm-3">
+                    <div className="col-sm-4">
                          <Phonetic phonetic = {props.data.phonetics} />
                     </div>
-                    <div className="col-sm-6">
-                    <h4 className="text-centered text-muted ">Nr. of definitions: {props.data.meanings.length}  </h4>
+                    <div className="col-sm-4">
+                    <h4 className="text-centered text-muted ">Parts of speach: {props.data.meanings.length}  </h4>
                     </div>
                 </div>
                 </div>

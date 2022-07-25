@@ -1,0 +1,10 @@
+.Example {
+    padding-top: 2px;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+.Example .example-definition {
+    font-style: italic;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 18px;
+}
