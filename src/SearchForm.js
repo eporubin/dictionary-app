@@ -40,13 +40,14 @@ export default function SearchForm(){
             const response = await responseRaw.json();
             const firstResult = response[0];
             setSearchData(firstResult);
-            let imageApiKey = '563492ad6f91700001000001d111b2ef67044484959f02d163ee9643';
-            let imageUrl = `https://api.pexels.com/v1/search?query=fantastic&per_page=9`;
-            axios.get(imageUrl, {headers: {Authorization: `Bearer ${imageApiKey}`},}).then(handleImageResponse);
+            // let imageApiKey = '563492ad6f91700001000001d111b2ef67044484959f02d163ee9643';
+            // let imageUrl = `https://api.pexels.com/v1/search?query=fantastic&per_page=9`;
+            // axios.get(imageUrl, {headers: {Authorization: `Bearer ${imageApiKey}`},}).then(handleImageResponse);
 
     }
     useEffect(() => {
         initializeDictionary()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
         <div className="SearchForm pb-3">
