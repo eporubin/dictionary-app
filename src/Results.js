@@ -46,7 +46,7 @@ export default function Results(props){
         )
     } else {
         return (
-            <h1> Upps, looks like this word does not exist in our repository</h1>
+            <div className="card m-5 p-5 text-center shadow-lg"> <h2>Upps, looks like this word does not exist in our repository 😢. Please check the spelling and try again 📤</h2></div>
         )
     }
    

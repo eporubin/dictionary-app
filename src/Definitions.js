@@ -4,12 +4,13 @@ import Synonyms from "./Synonyms";
 import Example from "./Example";
 
 export default function Definitions(props){
-    return (
-       <div className="Definitions">
+    if (props.meaning.synonyms.length > 0){
+        return(
+            <div className="Definitions">
            <div className="row">
-           <div className="col-md-8 card">
+           <div className="col-md-9 card">
                 <h1>{props.meaning.partOfSpeech}</h1>
-                <div>
+                <div className="mb-3">
                     {props.meaning.definitions.map(function(definition, index){
                     return(
                         <div key={index}>
@@ -21,10 +22,33 @@ export default function Definitions(props){
                 </div>
            </div>
            {/* to make this section appear only if there is any synonyms */}
-           <div className="col-md-4">
+           <div className="col-md-3">
               <Synonyms synonyms = {props.meaning.synonyms} />
            </div>
            </div>
        </div>
-    )
+        )
+
+    } else {
+        return (
+            <div className="Definitions">
+            <div className="row">
+            <div className="col-md-12 card">
+                 <h1>{props.meaning.partOfSpeech}</h1>
+                 <div className="mb-3">
+                     {props.meaning.definitions.map(function(definition, index){
+                     return(
+                         <div key={index}>
+                             <div className="definition">📚{definition.definition} </div>
+                         </div>
+                     )
+                 })}
+                 </div>
+            </div>
+            </div>
+        </div>
+        )
+
+    }
+    
 }
