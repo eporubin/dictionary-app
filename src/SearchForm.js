@@ -11,7 +11,7 @@ export default function SearchForm(){
    
     let [searchTerm, setSearchTerm] = useState("");
     let [searchData, setSearchData] = useState(undefined);
-    let [photo, setPhotos] = useState(null);
+    let [photo, setPhotos] = useState();
     function UpdateSearch(event){
         event.preventDefault()
         setSearchTerm(event.target.value)
@@ -35,19 +35,19 @@ export default function SearchForm(){
         }
     }
     async function initializeDictionary(){
-        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/form`;
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/fantastic`;
         const responseRaw = await fetch(apiUrl);
             const response = await responseRaw.json();
             const firstResult = response[0];
             setSearchData(firstResult);
             let imageApiKey = '563492ad6f91700001000001d111b2ef67044484959f02d163ee9643';
-            let imageUrl = `https://api.pexels.com/v1/search?query=form&per_page=9`;
+            let imageUrl = `https://api.pexels.com/v1/search?query=fantastic&per_page=9`;
             axios.get(imageUrl, {headers: {Authorization: `Bearer ${imageApiKey}`},}).then(handleImageResponse);
 
     }
     useEffect(() => {
         initializeDictionary()
-    }, )
+    }, [])
     return (
         <div className="SearchForm pb-3">
             <header>
@@ -84,7 +84,7 @@ export default function SearchForm(){
             <footer>
                 <div className="p-2">
                     <h6>
-                        <a href="https://github.com/eporubin/dictionary-app" target="_blank" rel="noreferrer">Open-source</a> project by <a href="https://subtle-conkies-6c2465.netlify.app/" target="_blank" rel="noreferrer">Elena Porubin </a>🌻 build with 🖥️React
+                        <a href="https://github.com/eporubin/dictionary-app" target="_blank" rel="noreferrer" >Open-source</a> project by <a href="https://subtle-conkies-6c2465.netlify.app/" target="_blank" rel="noreferrer">Elena Porubin </a>🌻 build with 🖥️React
                     </h6>
                 </div>
             </footer>
