@@ -47,7 +47,7 @@ export default function SearchForm(){
     }
     useEffect(() => {
         initializeDictionary()
-    }, [])
+    }, )
     return (
         <div className="SearchForm pb-3">
             <header>
@@ -84,7 +84,7 @@ export default function SearchForm(){
             <footer>
                 <div className="p-2">
                     <h6>
-                        <a href="https://github.com/eporubin/dictionary-app">Open-source</a> project by <a href="https://subtle-conkies-6c2465.netlify.app/">Elena Porubin </a>🌻 build with 🖥️React
+                        <a href="https://github.com/eporubin/dictionary-app" target="_blank" rel="noreferrer">Open-source</a> project by <a href="https://subtle-conkies-6c2465.netlify.app/" target="_blank" rel="noreferrer">Elena Porubin </a>🌻 build with 🖥️React
                     </h6>
                 </div>
             </footer>

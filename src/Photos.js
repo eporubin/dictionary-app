@@ -8,8 +8,8 @@ export default function Photos(props){
                     {props.data.map(function(photo, index){
                     return(
                         <div className="col-md-4 img-hover-zoom" key={index}>
-                        <a href={photo.src.original} target = "_blank"  >
-                        <img src={photo.src.landscape}  className="img-fluid card shadow-lg p-2" />
+                        <a href={photo.src.original} target = "_blank" rel="noreferrer" >
+                        <img src={photo.src.landscape}  className="img-fluid card shadow-lg p-2" alt={photo.alt} />
                         </a>
                         </div>
                     );
