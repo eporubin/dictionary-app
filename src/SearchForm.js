@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import './SearchForm.css';
 import Results from "./Results";
 import Photos from "./Photos";
-import axios from "axios";
 
 //api documentation https://dictionaryapi.dev/
 
@@ -16,33 +15,35 @@ export default function SearchForm(){
         event.preventDefault()
         setSearchTerm(event.target.value)
     }
-    function handleImageResponse(response){
-        console.log(response.data);
-        setPhotos(response.data.photos)
+    function handleImageResponse(photoList){
+        setPhotos(photoList)
     }
-    async function Search(event){
-        event.preventDefault()
-        if (searchTerm !== " "){
-            let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`
+    async function searchOptim(word){
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
             const responseRaw = await fetch(apiUrl);
             const response = await responseRaw.json();
             const firstResult = response[0];
             setSearchData(firstResult);
-            console.log(`Search data is`, firstResult);
-            let imageApiKey = '563492ad6f91700001000001d111b2ef67044484959f02d163ee9643';
-            let imageUrl = `https://api.pexels.com/v1/search?query=${searchTerm}&per_page=9`;
-            axios.get(imageUrl, {headers: {Authorization: `Bearer ${imageApiKey}`},}).then(handleImageResponse);
+
+        // Loading the images from the image API
+        let imageApiKey = '563492ad6f91700001000001d111b2ef67044484959f02d163ee9643';
+        let imageUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=9`;
+            const imageResponseRaw = fetch(imageUrl, {
+                headers: {
+                    Authorization: `Bearer ${imageApiKey}`
+                }
+            });
+            const imageResponse = await (await imageResponseRaw).json();
+            handleImageResponse(imageResponse.photos)
+    }
+    async function Search(event){
+        event.preventDefault()
+        if (searchTerm !== " "){
+            searchOptim(`${searchTerm}`);
         }
     }
     async function initializeDictionary(){
-        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/fantastic`;
-        const responseRaw = await fetch(apiUrl);
-            const response = await responseRaw.json();
-            const firstResult = response[0];
-            setSearchData(firstResult);
-            // let imageApiKey = '563492ad6f91700001000001d111b2ef67044484959f02d163ee9643';
-            // let imageUrl = `https://api.pexels.com/v1/search?query=fantastic&per_page=9`;
-            // axios.get(imageUrl, {headers: {Authorization: `Bearer ${imageApiKey}`},}).then(handleImageResponse);
+        searchOptim("see");
 
     }
     useEffect(() => {
